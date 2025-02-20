@@ -38,10 +38,11 @@ class SeleniumTypingPage:
                             running = False
             except:
                 pass
+            time.sleep(2)
             driver.save_screenshot("screenshot.png")
 
             # ESC キーが押されるまで待機
-            time.sleep(10)
+            time.sleep(8)
                 
 if __name__ == "__main__":
     with webdriver.Chrome() as driver:
