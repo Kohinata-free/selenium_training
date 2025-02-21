@@ -9,7 +9,7 @@ class SeleniumTypingPage:
         with webdriver.Chrome() as driver:
             driver.get("https://keyboard-dojo.net/")
             
-            time.sleep(3)
+            time.sleep(1)
             
             elements = driver.find_elements(By.ID, "start")
             element = elements[0]

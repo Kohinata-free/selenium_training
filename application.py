@@ -12,6 +12,13 @@ class Application(tkinter.Frame):
         self.create_widgets()
         
     def create_widgets(self):
+        lbl_message = tkinter.Label(self)
+        lbl_message["text"] = "自動タイピングを行います"
+        lbl_message["font"] = ("Arial", 16)  # フォントとサイズ指定
+        lbl_message["wraplength"] = 300  # 改行幅を設定
+        lbl_message["bg"] = "systemTransparent"  # 背景を透過に設定
+        lbl_message["fg"] = "black"  # 文字色を黒に設定
+        lbl_message.place(relx=0.5, rely=0.3, anchor="center", width=300, height=50)
         btn_start = tkinter.Button(self)
         btn_start["text"] = "スタート"
         btn_start["command"] = stp.OpenTypingPage
@@ -21,5 +28,5 @@ class Application(tkinter.Frame):
         btn_quit["text"] = "終了"
         btn_quit["command"] = self.root.destroy
         btn_quit["font"] = ("Arial", 16)  # フォントとサイズ指定
-        btn_quit.place(relx=0.8, rely=0.9, anchor="center",width=150, height=50)
+        btn_quit.place(relx=0.85, rely=0.9, anchor="center",width=100, height=50)
         # btn_quit.pack(side="bottom", width=100, height=50)
